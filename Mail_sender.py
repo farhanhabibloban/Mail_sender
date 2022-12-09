@@ -32,6 +32,5 @@ try:
             print("Your mail has been sent")
         else:
             exit()
-
 except:
     print("Something Wrong on your Input or You Select (N)")

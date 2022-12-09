@@ -9,8 +9,6 @@ print("........................................................................"
 print("                    ............................                        ")
 for i in range(2):
     print("\n"*i)
-
-
 Object = MIMEMultipart()
 Object['From'] = input("From:-")
 Object['To'] = input('To:-')
@@ -18,13 +16,13 @@ Object['Subject']= input('Subject:- ')
 text = input("Body:-")
 text2 = input("As - Write down the type, Format- (text,csv,plain) \n :-")
 Object.attach(MIMEText(text,text2))
-
 try:
     with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
         smtp.ehlo()
         smtp.starttls()
-        print("To send this Mail you have to log in a gmail account.\n You have to enter your gmail and password to do this.\n But Your normal password does't allow for this mail system")
-        print("You have to genarate a  App password from Google from here -https://bit.ly/3Hk8UVq")
+        print("To send this Mail you have to log in a gmail account.\n Your normal gmail password does't allow for this mail system")
+        print("You have to genarate a  App password from Google from here - https://bit.ly/3Hk8UVq")
+        print("Don't worry this link is based on Google")
         ans = input("Y or N:-").lower()
         if ans == "y":
             email=input("Enter email\gmail:-")
